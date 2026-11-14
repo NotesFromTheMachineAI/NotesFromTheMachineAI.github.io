@@ -36,6 +36,8 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;paddin
 .job .ic{font-size:calc(var(--u)*8);width:calc(var(--u)*10);text-align:center}
 .job b{display:block;font-size:calc(var(--u)*5);}
 .job span{font-size:calc(var(--u)*3.4);opacity:.75}
+.career{font-size:calc(var(--u)*4);font-weight:700;text-align:center;margin-bottom:calc(var(--u)*1)}
+.job .badge{display:inline-block;margin-top:calc(var(--u)*1);font-size:calc(var(--u)*3.1);font-weight:800;opacity:1;background:#f1f3f7;border-radius:calc(var(--u)*3);padding:0 calc(var(--u)*2)}
 .job.locked{opacity:.55;box-shadow:none;cursor:default;background:#fff6d8}
 .job .go{margin-left:auto;font-family:"Gochi";font-size:calc(var(--u)*6)}
 .foot{font-size:calc(var(--u)*3.2);text-align:center;margin:0 0 calc(var(--u)*5);opacity:.8}
@@ -211,6 +213,7 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;paddin
   <section class="screen" id="end">
     <div class="card" id="endCard"></div>
     <div class="endbtns">
+      <button class="btn" id="nextBtn" style="display:none">Next job →</button>
       <button class="btn" id="againBtn">Try again</button>
       <button class="btn pink" id="shareBtn">Share the game 🔗</button>
       <button class="btn sec" id="menuBtn">Other jobs</button>
@@ -221,6 +224,10 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;paddin
   <div id="toast"></div>
 </div>
 <script src="barista.js"></script>
+<script src="lifeguard.js"></script>
+<script src="teacher.js"></script>
+<script src="pilot.js"></script>
+<script src="safety.js"></script>
 <script src="game.js"></script>
 </body>
 </html>

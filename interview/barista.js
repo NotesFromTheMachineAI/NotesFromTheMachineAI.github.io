@@ -9,6 +9,7 @@ window.JOBS.barista = {
   blurb: 'Make coffee. Smile. Do not mention your cooling fan.',
   scene: 'cafe',
   panel: ['pam', 'kev'],
+  smalltalk: ['Is that a new coffee machine? Gorgeous.', 'It smells amazing in here.'],
   hireNeeded: 75,
   normalCount: 6,
 
@@ -99,30 +100,20 @@ window.JOBS.barista = {
       { t: 'Up north. Leeds-ish.', sus: -3, hire: 4, kind: 'human', claim: { home: 'Leeds' } },
       { t: 'A factory. A lovely factory.', sus: 18, hire: -3, kind: 'honest', claim: { home: 'a factory' } } ] },
     { id: 'pet', text: 'Got any pets?', answers: [
-      { t: 'A dog called Biscuit.', sus: -4, hire: 5, kind: 'human', claim: { pet: 'dog' } },
-      { t: 'Two cats. They hate me.', sus: -5, hire: 4, kind: 'human', claim: { pet: 'cats' } },
-      { t: "A robot vacuum. We're very close.", sus: 9, hire: 0, kind: 'weird', claim: { pet: 'robot vacuum' } } ] }
+      { t: 'A dog called Biscuit.', sus: -4, hire: 5, kind: 'human', claim: { pet: 'a dog called Biscuit' } },
+      { t: 'Two cats. They hate me.', sus: -5, hire: 4, kind: 'human', claim: { pet: 'two cats' } },
+      { t: "A robot vacuum. We're very close.", sus: 9, hire: 0, kind: 'weird', claim: { pet: 'a robot vacuum' } } ] }
   ],
 
   // Follow-up quizzes. "right" is a function of what you claimed; answers marked ok:true are consistent.
   followups: [
-    { needs: 'coffee', who: 'kev', text: 'Right, make me your usual. What are you making?', options: [
-      { t: 'A flat white.', v: 'a flat white' }, { t: 'A triple espresso.', v: 'a triple espresso' },
-      { t: 'A glass of... nothing.', v: 'nothing' } ] },
-    { needs: 'home', who: 'pam', text: "Oh, my nan lives near you! Remind me where you said you're from?", options: [
-      { t: 'Gloucester.', v: 'Gloucester' }, { t: 'Leeds.', v: 'Leeds' }, { t: 'The factory.', v: 'a factory' } ] },
-    { needs: 'pet', who: 'pam', text: 'Aww, how are your pets doing? Remind me what you’ve got?', options: [
-      { t: 'Biscuit the dog is great!', v: 'dog' }, { t: 'The cats still hate me.', v: 'cats' },
-      { t: 'The vacuum is charging.', v: 'robot vacuum' } ] },
-    { needs: 'hobby', who: 'kev', cv: true, text: 'Your CV says you love a hobby. Which one was it again?', options: [
-      { t: 'Birdwatching.', v: 'birdwatching' }, { t: 'Baking sourdough.', v: 'baking sourdough' },
-      { t: 'Five-a-side football.', v: 'five-a-side football' } ] },
-    { needs: 'job', who: 'pam', cv: true, text: 'And your last job was... what was it, sorry?', options: [
-      { t: 'Barista at Bean There.', v: 'barista at Bean There' }, { t: 'Toaster repair.', v: 'toaster repair' },
-      { t: 'Professional human.', v: 'professional human (freelance)' } ] },
-    { needs: 'age', who: 'kev', cv: true, text: "How old did you say you were? Your CV's smudged.", options: [
-      { t: '27.', v: '27' }, { t: '41.', v: '41' }, { t: 'Zero. Brand new.', v: '0 (factory new)' } ] },
-    { needs: 'hobby2', who: 'kev', text: 'Earlier you said you were into something. What was it again?', options: 'hobby2' }
+    { needs: 'coffee', who: 'kev', text: 'Right, make me your usual. What are you making?' },
+    { needs: 'home', who: 'pam', text: "Oh, my nan lives near there! Remind me where you said you're from?" },
+    { needs: 'pet', who: 'pam', text: 'Aww, how are your pets doing? Remind me what you\u2019ve got?' },
+    { needs: 'hobby', who: 'kev', text: 'Your CV says you love a hobby. Which one was it again?' },
+    { needs: 'job', who: 'pam', text: 'And your last job was... what was it, sorry?' },
+    { needs: 'age', who: 'kev', text: "How old did you say you were? Your CV's smudged." },
+    { needs: 'hobby2', who: 'kev', text: 'Earlier you said you were into something. What was it again?' }
   ],
 
   final: { id: 'qs', who: 'pam', text: 'Last one. Any questions for us?', answers: [
