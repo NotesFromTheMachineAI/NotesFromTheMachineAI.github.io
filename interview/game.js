@@ -448,6 +448,7 @@ function start(job, sel) {
   $('#robot').innerHTML = ROBOT_SVG;
   $('#needMark').style.left = job.hireNeeded + '%';
   job.panel.forEach(id => setFace(id, 'neutral'));
+  $('#qwho').textContent = '…'; $('#qwho').style.background = '#8a8f9c'; $('#qtext').textContent = ''; $('#answers').innerHTML = '';
   renderTools(); meters(); show('interview');
   wait(400).then(nextQ);
 }
